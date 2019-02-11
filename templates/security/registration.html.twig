@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Zone d'inscription</h1>
+
+	{{form_start(form)}}
+	{{form_row(form.username, {'label': 'Nom d\'utilisateur', 'attr': {'placeholder': 'nom d\'utilisateur ...'}})}}
+	{{form_row(form.email, {'label': 'Adresse email ', 'attr' : {'placeholder' : 'BBC@gmail.com ...'}})}}
+	{{form_row(form.password, {'label': 'Mot de passe', 'attr' : {'placeholder' : '123456789'}})}}
+	{{form_row(form.confirm_password, {'label': 'Confirmation du mot de passe', 'attr' : {'placeholder': '123456789'}})}}
+	<button type="submit" class="btn btn-success">inscription !</button>
+	{{form_end(form)}}
+{% endblock %}
